@@ -28,7 +28,6 @@ for file_i = 1:n_mat
     clear AIFP
     load(fullfile(lfp_dir,data_file))
     
-    % ------------------------------------------------------------------
     % 2023-11-06: SE for SA
     % For eye data. I thought it was stored in a separate
     % variable/structure within the datafile, but it appears not. If you
@@ -36,12 +35,10 @@ for file_i = 1:n_mat
     % save it separately.
     
     % Example-----------------------------
-    % Add this to the scripts below to extract eyes:
     %  load(fullfile(lfp_dir,data_file))
-    %  eye_data = AIFP.XXXX.eye; (I'm not sure what the variable is, as
-    %  it's taking so long to load in...)
+    %  eye_data = AIFP.FP.trialbase;
     %  save(fullfile(save_dir,[data_file(1:end-22) '_eye.mat']),'eye_data', '-v7.3');
-    %  ------------------------------------------------------------------
+
     
     try
         % Break down large LFP file into separate areas for future processing
